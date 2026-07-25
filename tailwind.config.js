@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -44,10 +43,6 @@ module.exports = {
       boxShadow: {
         'glow': '0 0 20px rgba(255, 107, 107, 0.6)',
         'glow-secondary': '0 0 30px rgba(78, 205, 196, 0.5)',
-      },
-      backdropFilter: {
-        'none': 'none',
-        'blur': 'blur(10px)',
       },
     },
   },

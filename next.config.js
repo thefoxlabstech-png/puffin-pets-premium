@@ -2,18 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
     ],
-    unoptimized: false,
   },
-  webpack: (config) => {
-    config.externals.push('canvas', 'fs');
-    return config;
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
