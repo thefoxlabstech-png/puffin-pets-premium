@@ -3,16 +3,17 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenu, HiX, HiHeart } from 'react-icons/hi';
+import Link from 'next/link';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#' },
-    { label: 'Features', href: '#features' },
-    { label: 'Pets', href: '#pets' },
-    { label: 'Premium', href: '#premium' },
-    { label: 'About', href: '#about' },
+    { label: 'Home', href: '/' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Pets', href: '/#pets' },
+    { label: 'Premium', href: '/#premium' },
+    { label: 'Jokes', href: '/jokes' },
   ];
 
   return (
@@ -24,10 +25,12 @@ const Navigation = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="flex items-center gap-2"
           >
-            <div className="text-2xl">🐧</div>
-            <span className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Puffin Pets
-            </span>
+            <Link href="/" className="flex items-center gap-2">
+              <div className="text-2xl">🐧</div>
+              <span className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Puffin Pets
+              </span>
+            </Link>
           </motion.div>
 
           <div className="hidden md:flex gap-8">
